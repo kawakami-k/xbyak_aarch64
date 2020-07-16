@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: test_all
-      run: ./test_all.sh    
+      run: cd test && ./test_all.sh    
