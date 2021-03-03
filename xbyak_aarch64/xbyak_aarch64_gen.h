@@ -759,7 +759,7 @@ public:
     (void)begin;
     (void)end;
 #elif __APPLE__
-    sys_icache_invalidate(begin, ((char *)begin) - ((char *)end));
+    sys_icache_invalidate(begin, ((char *)end) - ((char *)begin));
 #else
     __builtin___clear_cache((char *)begin, (char *)end);
 #endif
