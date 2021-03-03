@@ -14,6 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
+#ifdef __APPLE__
+#include <libkern/OSCacheControl.h>
+#endif
 
 #include "xbyak_aarch64_adr.h"
 #include "xbyak_aarch64_code_array.h"
@@ -756,7 +759,7 @@ public:
     (void)begin;
     (void)end;
 #elif __APPLE__
-    sys_icache_invalidate(begin, begin - end);
+    sys_icache_invalidate(begin, ((char *)begin) - ((char *)end));
 #else
     __builtin___clear_cache((char *)begin, (char *)end);
 #endif
