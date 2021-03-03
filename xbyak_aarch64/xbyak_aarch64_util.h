@@ -24,6 +24,8 @@
 #include <sys/sysctl.h>
 #endif
 
+#include <xbyak_aarch64/xbyak_aarch64_err.h>
+
 namespace Xbyak_aarch64 {
 namespace util {
 
