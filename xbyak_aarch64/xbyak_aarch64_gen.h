@@ -755,6 +755,8 @@ public:
 #ifdef _WIN32
     (void)begin;
     (void)end;
+#elif __APPLE__
+    sys_icache_invalidate(begin, begin - end);
 #else
     __builtin___clear_cache((char *)begin, (char *)end);
 #endif
