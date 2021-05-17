@@ -1,12 +1,14 @@
-SRC=add.cpp add2.cpp label.cpp direct_write.cpp dump.cpp bf.cpp cpuinfo.cpp
+SRC=add.cpp add2.cpp label.cpp direct_write.cpp dump.cpp bf.cpp cpuinfo.cpp math_fusion.cpp math_fusion2.cpp math_fusion3.cpp simd.cpp
 OBJ=$(SRC:.cpp=.o)
 DEP=$(SRC:.cpp=.d)
 EXE=$(SRC:.cpp=.exe)
 all: $(EXE)
 
 LDFLAGS=-L ../lib -lxbyak_aarch64
+#CFLAGS=-std=c++11 -g -DNDEBUG -Wall -Wextra -I ../
 CFLAGS=-std=c++11 -g -DNDEBUG -Wall -Wextra -I ../
-#CFLAGS+=-march=armv8.2-a+sve
+CFLAGS+=-march=armv8.2-a+sve
+CFLAGS+=-fsimdmath
 ifneq ($(DEBUG),1)
 CFLAGS+=-O2
 endif
