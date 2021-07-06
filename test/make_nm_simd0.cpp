@@ -2389,22 +2389,7 @@ public:
 
   void putDataProcSimd() {
     putDataProcSimd_Move();
-    putDataProcSimd_Arithmetic();
-    putDataProcSimd_Compare();
-    putDataProcSimd_WideningAndNarrowingArithmetic();
-    putDataProcSimd_UnaryArithmetic();
-    putDataProcSimd_ByElementArithmetic();
-    putDataProcSimd_Permute();
-    putDataProcSimd_Immediate();
-    putDataProcSimd_ShiftImmediate();
-    putDataProcSimd_FloatingPointAndIntergerConversion();
-    putDataProcSimd_ReduceAcrossVectorLanes();
-    putDataProcSimd_PairwiseArithmetic();
-    putDataProcSimd_DotProduct();
-    putDataProcSimd_TableLookup();
-    putDataProcSimd_ComplexNumberArithmetic();
-    putDataProcSimd_CryptographicExtension();
-  }
+    }
 
   void putDataProcSimdFp() { putDataProcSimd(); }
 

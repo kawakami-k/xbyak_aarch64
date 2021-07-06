@@ -46,6 +46,8 @@ const uint64_t XREG2 = flagBit++; /** Test vector is {x0, x1, ..., x30 } */
 const uint64_t XREG3 = flagBit++;
 const uint64_t WSP = flagBit++; /** Test vector is {wsp} */
 const uint64_t XSP = flagBit++; /** Test vector is {sp} */
+const uint64_t WZR = flagBit++; /** Test vector is {wzr} */
+const uint64_t XZR = flagBit++; /** Test vector is {xzr} */
 const uint64_t XNSP = flagBit++;
 const uint64_t XNSP2 = flagBit++;
 const uint64_t XNSP3 = flagBit++;
@@ -323,6 +325,40 @@ const uint64_t NOPARA = 100000;
     put(nemonic, op10, #name, 9);                                              \
   }
 
+#define PUT14(name, nm, op_1, op_2, op_3, op_4, op_5, op_6, op_7, op_8, op_9,  \
+              op_10, op_11, op_12, op_13, op_14)                 \
+  void put##name() const {                                                     \
+    std::vector<std::string> nemonic(nm);                                      \
+    std::vector<uint64_t> op1(op_1);                                           \
+    std::vector<uint64_t> op2(op_2);                                           \
+    std::vector<uint64_t> op3(op_3);                                           \
+    std::vector<uint64_t> op4(op_4);                                           \
+    std::vector<uint64_t> op5(op_5);                                           \
+    std::vector<uint64_t> op6(op_6);                                           \
+    std::vector<uint64_t> op7(op_7);                                           \
+    std::vector<uint64_t> op8(op_8);                                           \
+    std::vector<uint64_t> op9(op_9);                                           \
+    std::vector<uint64_t> op10(op_10);                                         \
+    std::vector<uint64_t> op11(op_11);                                         \
+    std::vector<uint64_t> op12(op_12);                                         \
+    std::vector<uint64_t> op13(op_13);                                         \
+    std::vector<uint64_t> op14(op_14);                                         \
+    put(nemonic, op1, #name, 0);                                               \
+    put(nemonic, op2, #name, 1);                                               \
+    put(nemonic, op3, #name, 2);                                               \
+    put(nemonic, op4, #name, 3);                                               \
+    put(nemonic, op5, #name, 4);                                               \
+    put(nemonic, op6, #name, 5);                                               \
+    put(nemonic, op7, #name, 6);                                               \
+    put(nemonic, op8, #name, 7);                                               \
+    put(nemonic, op9, #name, 8);                                               \
+    put(nemonic, op10, #name, 9);                                              \
+    put(nemonic, op11, #name, 10);                                             \
+    put(nemonic, op12, #name, 11);                                             \
+    put(nemonic, op13, #name, 12);                                             \
+    put(nemonic, op14, #name, 13);                                             \
+  }
+
 #define PUT16(name, nm, op_1, op_2, op_3, op_4, op_5, op_6, op_7, op_8, op_9,  \
               op_10, op_11, op_12, op_13, op_14, op_15, op_16)                 \
   void put##name() const {                                                     \
@@ -361,6 +397,69 @@ const uint64_t NOPARA = 100000;
     put(nemonic, op16, #name, 15);                                             \
   }
 
+#define PUT28(name, nm, op_1, op_2, op_3, op_4, op_5, op_6, op_7, op_8, op_9,  \
+              op_10, op_11, op_12, op_13, op_14, op_15, op_16, op_17, op_18,   \
+	      op_19, op_20, op_21, op_22, op_23, op_24, op_25, op_26, op_27, op_28) \
+  void put##name() const {                                                     \
+    std::vector<std::string> nemonic(nm);                                      \
+    std::vector<uint64_t> op1(op_1);                                           \
+    std::vector<uint64_t> op2(op_2);                                           \
+    std::vector<uint64_t> op3(op_3);                                           \
+    std::vector<uint64_t> op4(op_4);                                           \
+    std::vector<uint64_t> op5(op_5);                                           \
+    std::vector<uint64_t> op6(op_6);                                           \
+    std::vector<uint64_t> op7(op_7);                                           \
+    std::vector<uint64_t> op8(op_8);                                           \
+    std::vector<uint64_t> op9(op_9);                                           \
+    std::vector<uint64_t> op10(op_10);                                         \
+    std::vector<uint64_t> op11(op_11);                                         \
+    std::vector<uint64_t> op12(op_12);                                         \
+    std::vector<uint64_t> op13(op_13);                                         \
+    std::vector<uint64_t> op14(op_14);                                         \
+    std::vector<uint64_t> op15(op_15);                                         \
+    std::vector<uint64_t> op16(op_16);                                         \
+    std::vector<uint64_t> op17(op_17);                                         \
+    std::vector<uint64_t> op18(op_18);                                         \
+    std::vector<uint64_t> op19(op_19);                                         \
+    std::vector<uint64_t> op20(op_20);                                         \
+    std::vector<uint64_t> op21(op_21);                                         \
+    std::vector<uint64_t> op22(op_22);                                         \
+    std::vector<uint64_t> op23(op_23);                                         \
+    std::vector<uint64_t> op24(op_24);                                         \
+    std::vector<uint64_t> op25(op_25);                                         \
+    std::vector<uint64_t> op26(op_26);                                         \
+    std::vector<uint64_t> op27(op_27);                                         \
+    std::vector<uint64_t> op28(op_28);                                         \
+    put(nemonic, op1, #name, 0);                                               \
+    put(nemonic, op2, #name, 1);                                               \
+    put(nemonic, op3, #name, 2);                                               \
+    put(nemonic, op4, #name, 3);                                               \
+    put(nemonic, op5, #name, 4);                                               \
+    put(nemonic, op6, #name, 5);                                               \
+    put(nemonic, op7, #name, 6);                                               \
+    put(nemonic, op8, #name, 7);                                               \
+    put(nemonic, op9, #name, 8);                                               \
+    put(nemonic, op10, #name, 9);                                              \
+    put(nemonic, op11, #name, 10);                                             \
+    put(nemonic, op12, #name, 11);                                             \
+    put(nemonic, op13, #name, 12);                                             \
+    put(nemonic, op14, #name, 13);                                             \
+    put(nemonic, op15, #name, 14);                                             \
+    put(nemonic, op16, #name, 15);                                             \
+    put(nemonic, op17, #name, 16);                                             \
+    put(nemonic, op18, #name, 17);                                             \
+    put(nemonic, op19, #name, 18);                                             \
+    put(nemonic, op20, #name, 19);                                             \
+    put(nemonic, op21, #name, 20);                                             \
+    put(nemonic, op22, #name, 21);                                             \
+    put(nemonic, op23, #name, 22);                                             \
+    put(nemonic, op24, #name, 23);                                             \
+    put(nemonic, op25, #name, 24);                                             \
+    put(nemonic, op26, #name, 25);                                             \
+    put(nemonic, op27, #name, 26);                                             \
+    put(nemonic, op28, #name, 27);                                             \
+  }
+
 #define OPS(...)                                                               \
   { __VA_ARGS__ }
 #define NM(...)                                                                \
@@ -375,20 +474,22 @@ class Test {
   /** String used as test vector */
 
   std::vector<std::string> tv_WREG = {"w0", "w1",  "w2", "w4",
-                                      "w8", "w16", "w30"};
-  std::vector<std::string> tv_WREG3 = {"w6", "w16", "w28"};
+                                      "w8", "w16", "w30", "WReg(0)"};
+  std::vector<std::string> tv_WREG3 = {"w6", "w16", "w28", "WReg(6)"};
   std::vector<std::string> tv_XREG = {"x7", "x0", "x1",  "x2",
-                                      "x4", "x8", "x16", "x30"};
+                                      "x4", "x8", "x16", "x30", "XReg(7)"};
   std::vector<std::string> tv_XREG2 = {"x3", "x0", "x1",  "x2",
-                                       "x4", "x8", "x16", "x30"};
-  std::vector<std::string> tv_XREG3 = {"x5", "x15", "x29"};
+                                       "x4", "x8", "x16", "x30", "XReg(3)"};
+  std::vector<std::string> tv_XREG3 = {"x5", "x15", "x29", "XReg(5)"};
   std::vector<std::string> tv_WSP = {"wsp"};
   std::vector<std::string> tv_XSP = {"sp"};
+  std::vector<std::string> tv_WZR = {"wzr"};
+  std::vector<std::string> tv_XZR = {"xzr"};
   std::vector<std::string> tv_XNSP = {"x7", "x0",  "x1",  "x2", "x4",
-                                      "x8", "x16", "x30", "sp"};
+                                      "x8", "x16", "x30", "sp", "XReg(7)"};
   std::vector<std::string> tv_XNSP2 = {"x3", "x0",  "x1",  "x2", "x4",
-                                       "x8", "x16", "x30", "sp"};
-  std::vector<std::string> tv_XNSP3 = {"x5", "x15", "x29"};
+                                       "x8", "x16", "x30", "sp", "XReg(3)"};
+  std::vector<std::string> tv_XNSP3 = {"x5", "x15", "x29", "XReg(5)"};
   std::vector<std::string> tv_IMM4BIT = {"7", "0", "1", "2", "4", "8", "15"};
   std::vector<std::string> tv_IMM5BIT = {"0x1e", "0", "1",  "2",
                                          "4",    "8", "16", "31"};
@@ -477,6 +578,8 @@ class Test {
                                                           &tv_XREG3,
                                                           &tv_WSP,
                                                           &tv_XSP,
+                                                          &tv_WZR,
+                                                          &tv_XZR,
                                                           &tv_XNSP,
                                                           &tv_XNSP2,
                                                           &tv_XNSP3,
@@ -545,6 +648,8 @@ class Test {
                                                            &tv_XREG3,
                                                            &tv_WSP,
                                                            &tv_XSP,
+                                                           &tv_WZR,
+                                                           &tv_XZR,
                                                            &tv_XNSP,
                                                            &tv_XNSP2,
                                                            &tv_XNSP3,
@@ -1380,27 +1485,36 @@ public:
   /** Load/Store Pair on page C3-179. */
   /*** LDP Load Pair LDP on page C6-880 */
   /*** STP Store Pair STP on page C6-1131 */
-  PUT16(Load_Store_Pair0, NM("ldp", "stp"),
+  PUT28(Load_Store_Pair0, NM("ldp", "stp"),
         /**** Post-index */
         OPS(WREG, WREG3, SPECIFIC0), OPS(XREG, XREG3, SPECIFIC1),
         OPS(WREG3, WREG, SPECIFIC0), OPS(XREG3, XREG, SPECIFIC1),
+        OPS(WZR, WREG, SPECIFIC0), OPS(XZR, XREG, SPECIFIC1),
+        OPS(WREG3, WZR, SPECIFIC0), OPS(XREG3, XZR, SPECIFIC1),
         /**** Pre-index */
         OPS(WREG, WREG3, SPECIFIC2), OPS(XREG, XREG3, SPECIFIC3),
         OPS(WREG3, WREG, SPECIFIC2), OPS(XREG3, XREG, SPECIFIC3),
+        OPS(WZR, WREG, SPECIFIC2), OPS(XZR, XREG, SPECIFIC3),
+        OPS(WREG3, WZR, SPECIFIC2), OPS(XREG3, XZR, SPECIFIC3),
         /**** Sined offset */
         OPS(WREG, WREG3, PTR_O, XNSP2, PTR_C), OPS(WREG, WREG3, SPECIFIC4),
         OPS(XREG, XREG3, PTR_O, XNSP2, PTR_C), OPS(XREG, XREG3, SPECIFIC5),
         OPS(WREG3, WREG, PTR_O, XNSP2, PTR_C), OPS(WREG3, WREG, SPECIFIC4),
-        OPS(XREG3, XREG, PTR_O, XNSP2, PTR_C), OPS(XREG3, XREG, SPECIFIC5));
+        OPS(XREG3, XREG, PTR_O, XNSP2, PTR_C), OPS(XREG3, XREG, SPECIFIC5),
+        OPS(WZR, WREG, PTR_O, XNSP2, PTR_C), OPS(WREG3, WZR, SPECIFIC4),
+        OPS(XZR, XREG, PTR_O, XNSP2, PTR_C), OPS(XREG3, XZR, SPECIFIC5));
   /*** LDPSW Load Pair signed words LDPSW on page C6-883 */
-  PUT8(Load_Store_Pair1, NM("ldpsw"),
+  PUT14(Load_Store_Pair1, NM("ldpsw"),
        /**** Post-index */
        OPS(XREG, XREG3, SPECIFIC0), OPS(XREG3, XREG, SPECIFIC0),
+       OPS(XZR, XREG3, SPECIFIC0), OPS(XREG3, XZR, SPECIFIC0),
        /**** Pre-index */
        OPS(XREG, XREG3, SPECIFIC2), OPS(XREG3, XREG, SPECIFIC2),
+       OPS(XZR, XREG3, SPECIFIC2), OPS(XREG3, XZR, SPECIFIC2),
        /**** Sined offset */
        OPS(XREG, XREG3, PTR_O, XNSP2, PTR_C), OPS(XREG, XREG3, SPECIFIC4),
-       OPS(XREG3, XREG, PTR_O, XNSP2, PTR_C), OPS(XREG3, XREG, SPECIFIC4));
+       OPS(XREG3, XREG, PTR_O, XNSP2, PTR_C), OPS(XREG3, XREG, SPECIFIC4),
+       OPS(XZR, XREG, PTR_O, XNSP2, PTR_C), OPS(XREG3, XZR, SPECIFIC4));
 
   void putLoadStorePair_core() {
     putLoad_Store_Pair0();

@@ -1038,9 +1038,9 @@ public:
 
   void declareAllVregElem() {
     // declareVregElem("b", 8,  tmpV, idx8B);
-    declareVregElem("b", 16, tmpV, idx16B);
+    // declareVregElem("b", 16, tmpV, idx16B);
     // declareVregElem("h", 4,  tmpV, idx4H);
-    declareVregElem("h", 8, tmpV, idx8H);
+    // declareVregElem("h", 8, tmpV, idx8H);
     // declareVregElem("s", 2,  tmpV, idx2S);
     declareVregElem("s", 4, tmpV, idx4S);
     // declareVregElem("d", 1,  tmpV, idx1D);
@@ -2388,22 +2388,10 @@ public:
   */
 
   void putDataProcSimd() {
-    putDataProcSimd_Move();
-    putDataProcSimd_Arithmetic();
-    putDataProcSimd_Compare();
-    putDataProcSimd_WideningAndNarrowingArithmetic();
     putDataProcSimd_UnaryArithmetic();
     putDataProcSimd_ByElementArithmetic();
     putDataProcSimd_Permute();
     putDataProcSimd_Immediate();
-    putDataProcSimd_ShiftImmediate();
-    putDataProcSimd_FloatingPointAndIntergerConversion();
-    putDataProcSimd_ReduceAcrossVectorLanes();
-    putDataProcSimd_PairwiseArithmetic();
-    putDataProcSimd_DotProduct();
-    putDataProcSimd_TableLookup();
-    putDataProcSimd_ComplexNumberArithmetic();
-    putDataProcSimd_CryptographicExtension();
   }
 
   void putDataProcSimdFp() { putDataProcSimd(); }

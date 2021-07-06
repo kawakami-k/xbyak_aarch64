@@ -499,22 +499,22 @@ class Test {
   /** String used as test vector */
 
   std::vector<std::string> tv_WREG = {"w0", "w1",  "w2", "w4",
-                                      "w8", "w16", "w30"};
+                                      "w8", "w16", "w30", "WReg(0)"};
   std::vector<std::string> tv_XREG = {"x7", "x0", "x1",  "x2",
-                                      "x4", "x8", "x16", "x30"};
+                                      "x4", "x8", "x16", "x30", "XReg(7)"};
   std::vector<std::string> tv_XREG2 = {"x3", "x0", "x1",  "x2",
-                                       "x4", "x8", "x16", "x30"};
+                                       "x4", "x8", "x16", "x30", "XReg(3)"};
   std::vector<std::string> tv_WSP = {"wsp"};
   std::vector<std::string> tv_XSP = {"sp"};
   std::vector<std::string> tv_XNSP = {"x7", "x0",  "x1",  "x2", "x4",
-                                      "x8", "x16", "x30", "sp"};
+                                      "x8", "x16", "x30", "sp", "XReg(7)"};
   std::vector<std::string> tv_XNSP2 = {"x3", "x0",  "x1",  "x2", "x4",
-                                       "x8", "x16", "x30", "sp"};
-  std::vector<std::string> tv_XNSP3 = {"x5", "x15", "x29"};
+                                       "x8", "x16", "x30", "sp", "XReg(3)"};
+  std::vector<std::string> tv_XNSP3 = {"x5", "x15", "x29", "XReg(5)"};
   std::vector<std::string> tv_WNZR = {"w7", "w0",  "w1",  "w2", "w4",
-                                      "w8", "w16", "w30", "wzr"};
+                                      "w8", "w16", "w30", "wzr", "WReg(7)"};
   std::vector<std::string> tv_XNZR = {"x3", "x0",  "x1",  "x2", "x4",
-                                      "x8", "x16", "x30", "xzr"};
+                                      "x8", "x16", "x30", "xzr", "XReg(3)"};
   std::vector<std::string> tv_IMM1BIT = {"1", "0"};
   std::vector<std::string> tv_IMM2BIT = {"1", "0", "1", "2"};
   std::vector<std::string> tv_IMM3BIT = {"3", "0", "1", "2", "4", "7"};

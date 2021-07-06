@@ -245,9 +245,9 @@ class Test {
   /** String used as test vector */
 
   std::vector<std::string> tv_WREG = {"w0", "w1",  "w2", "w4",
-                                      "w8", "w16", "w30"};
+                                      "w8", "w16", "w30", "WReg(0)"};
   std::vector<std::string> tv_XREG = {"x0", "x1",  "x2", "x4",
-                                      "x8", "x16", "x30"};
+                                      "x8", "x16", "x30", "XReg(0)"};
   std::vector<std::string> tv_WSP = {"wsp"};
   std::vector<std::string> tv_XSP = {"sp"};
   std::vector<std::string> tv_IMM4BIT = {"7", "0", "1", "2", "4", "8", "15"};

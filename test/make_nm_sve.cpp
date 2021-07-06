@@ -289,11 +289,11 @@ class Test {
 
   /** String used as test vector */
   std::vector<std::string> tv_WREG = {"w0", "w1",  "w2", "w4",
-                                      "w8", "w16", "w30"};
+                                      "w8", "w16", "w30", "WReg(0)"};
   std::vector<std::string> tv_XREG = {"x0", "x1",  "x2", "x4",
-                                      "x8", "x16", "x30"};
+                                      "x8", "x16", "x30","XReg(0)"};
   std::vector<std::string> tv_VREG = {"v0", "v1",  "v2", "v4",
-                                      "v8", "v16", "v31"};
+                                      "v8", "v16", "v31", "VReg(0)"};
   std::vector<std::string> tv_IMM0BIT = {"0"};
   std::vector<std::string> tv_IMM1BIT = {"1", "0"};
   std::vector<std::string> tv_IMM2BIT = {"3", "0", "1", "2"};
@@ -327,17 +327,17 @@ class Test {
       "0.2109375", "28.0",    "14.5",    "7.5",  "3.875",   "1.9375"};
 
   std::vector<std::string> tv_BREG = {"b7", "b0", "b1",  "b2",
-                                      "b4", "b8", "b16", "b31"};
+                                      "b4", "b8", "b16", "b31", "BReg(7)"};
   std::vector<std::string> tv_HREG = {"h7", "h0", "h1",  "h2",
-                                      "h4", "h8", "h16", "h31"};
+                                      "h4", "h8", "h16", "h31", "HReg(7)"};
   std::vector<std::string> tv_SREG = {"s7", "s0", "s1",  "s2",
-                                      "s4", "s8", "s16", "s31"};
+                                      "s4", "s8", "s16", "s31", "SReg(7)"};
   std::vector<std::string> tv_DREG = {"d7", "d0", "d1",  "d2",
-                                      "d4", "d8", "d16", "d31"};
+                                      "d4", "d8", "d16", "d31", "DReg(7)"};
   std::vector<std::string> tv_QREG = {"q7", "q0", "q1",  "q2",
-                                      "q4", "q8", "q16", "q31"};
+                                      "q4", "q8", "q16", "q31", "QReg(7)"};
   std::vector<std::string> tv_ZREG = {"z7", "z0", "z1",  "z2",
-                                      "z4", "z8", "z16", "z31"};
+                                      "z4", "z8", "z16", "z31", "ZReg(7)"};
 
   std::vector<std::string> tv_SPECIFIC32, tv_SPECIFIC64, tv_SPECIFIC32_1,
       tv_SPECIFIC64_1, tv_SPECIFIC32_2, tv_SPECIFIC64_2, tv_SPECIFIC32_3,
@@ -419,7 +419,7 @@ class Test {
   std::vector<std::vector<std::string> *> &tv_Vectors = tv_VectorsAs;
 
   std::vector<std::string> tmpV = {"v7", "v0", "v1",  "v2",
-                                   "v4", "v8", "v16", "v31"};
+                                   "v4", "v8", "v16", "v31", "VReg(7)"};
   std::vector<int> idx8B = {7, 0, 1, 2, 4};
   std::vector<int> idx16B = {7, 0, 1, 2, 4, 8, 15};
   std::vector<int> idx4H = {3, 0, 1, 2};
