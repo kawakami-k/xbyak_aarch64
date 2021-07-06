@@ -20,5 +20,6 @@ job_1:
   script:
     - make
     - cd test
+    - export XBYAK_AARCH64_SANITIZE=1
     - ./test_all.sh -g
     - ./test_all.sh -f

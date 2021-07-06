@@ -1,3 +1,18 @@
+#*******************************************************************************
+# Copyright 2019-2021 FUJITSU LIMITED
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#******************************************************************************/
 ARCH?=$(shell uname -m)
 TARGET=lib/libxbyak_aarch64.a
 all: $(TARGET)
@@ -5,6 +20,9 @@ all: $(TARGET)
 CFLAGS=-std=c++11 -DNDEBUG -g -I ./xbyak_aarch64 -Wall -Wextra -fPIC
 ifneq ($(DEBUG),1)
 CFLAGS+=-O2
+endif
+ifeq ($(XBYAK_AARCH64_SANITIZE),1)
+CFLAGS+=-fsanitize=address
 endif
 
 LIB_OBJ=obj/xbyak_aarch64_impl.o
