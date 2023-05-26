@@ -17,6 +17,9 @@ export TCSDS_PATH="/opt/FJSVstclanga/v1.1.0"
 export PATH="${TCSDS_PATH}/bin:$PATH"
 export LD_LIBRARY_PATH="${TCSDS_PATH}/lib64:${LD_LIBRARY_PATH}"
 
+ls /opt/FJSVstclang
+
+
 export AS=as
 export CXX=FCC
 export AWK=awk
