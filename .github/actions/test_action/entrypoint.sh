@@ -1,6 +1,6 @@
 #!/bin/bash
 #*******************************************************************************
-# Copyright 2019-2020 FUJITSU LIMITED
+# Copyright 2019-2023 FUJITSU LIMITED
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 # *******************************************************************************/
 .github/automation/env/qemu.sh
 
-# Build Xbyak_aarch64
+# Build Xbyak_aarch64 with cross compiler
 source .github/automation/env/setenv-qemu
 make -j`grep -c processor /proc/cpuinfo`
 cd test
