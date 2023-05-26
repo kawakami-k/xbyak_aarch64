@@ -1,0 +1,15 @@
+export TCSDS_PATH="/opt/FJSVstclanga/v1.1.0"
+export PATH="${TCSDS_PATH}/bin:$PATH"
+export LD_LIBRARY_PATH="${TCSDS_PATH}/lib64:${LD_LIBRARY_PATH}"
+
+export AS=as
+export CXX=FCC
+export AWK=awk
+export SED=sed
+
+export AARCH64_TYPE="all"
+
+export CXX_FLAGS1="-std=c++11 -fomit-frame-pointer -Wall -fno-operator-names -I../xbyak_aarch64 -I./ -Wall -Wextra -Wformat=2 -Wcast-qual -Wcast-align -Wwrite-strings -Wfloat-equal -Wpointer-arith -Nclang -Knolargepage -Wno-ignored-qualifiers"
+export CXX_FLAGS2="-Wall -I../xbyak_aarch64 -DXBYAK_TEST -DXBYAK_USE_MMAP_ALLOCATOR -Nclang -Knolargepage"
+
+
