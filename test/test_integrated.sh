@@ -53,11 +53,11 @@ dumpNG () {
 
 set_variables() {
   case $ENV_SELECT in
-    f) source ${SETENV_PATH}/setenv-fcc
+    f) . ${SETENV_PATH}/setenv-fcc
       ;;
-    g) source ${SETENV_PATH}/setenv-gcc
+    g) . ${SETENV_PATH}/setenv-gcc
        ;;
-    q) source ${SETENV_PATH}/setenv-qemu
+    q) . ${SETENV_PATH}/setenv-qemu
       ;;
     *)
        ;;
