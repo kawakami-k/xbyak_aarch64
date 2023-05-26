@@ -56,17 +56,15 @@ dumpNG () {
 set_variables() {
   case $ENV_SELECT in
     f) source ${SETENV_PATH}/setenv-fcc
-       echo "compiler is FCC"
       ;;
     g) source ${SETENV_PATH}/setenv-gcc
-       echo "compiler is GCC"
        ;;
     q) source ${SETENV_PATH}/setenv-qemu
-       echo "compiler is GCC (Cross compiler for AArch64)"
       ;;
     *)
        ;;
   esac
+  echo "Compiler is ${CXX}."
 }
 
 #*******************************************************************************
