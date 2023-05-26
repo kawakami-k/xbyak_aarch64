@@ -20,7 +20,7 @@ if [ ${ARCH} != aarch64 ] ; then
 
   export QEMU_LD_PREFIX=/usr/aarch64-linux-gnu
   export QEMU_CPU="max,sve512=on"
-  export EMULATOR="qemu-aarch64"
+  export EMULATOR="qemu-system-aarch64"
 fi
 if [ ${ARCH} = arm64 ] ; then
   TOOL_PREFIX=aarch64-unknown-linux-gnu-
