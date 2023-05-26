@@ -17,7 +17,7 @@
 .github/automation/env/qemu.sh
 
 # Build Xbyak_aarch64
-source .github/automation/env/setenv
+source .github/automation/env/setenv-qemu
 make -j`grep -c processor /proc/cpuinfo`
 cd test
 ./test_all.sh -q

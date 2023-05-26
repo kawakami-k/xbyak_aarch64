@@ -54,7 +54,7 @@ do_all_test() {
     done
 }
 
-while getopts gf OPT
+while getopts fgq OPT
 do
     case $OPT in
         f) COMPILER=FCC

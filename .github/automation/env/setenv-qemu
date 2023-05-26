@@ -14,7 +14,6 @@
 # imitations under the License.
 # *******************************************************************************/
 export ARCH=$(uname -m)
-
 TOOL_PREFIX=""
 if [ ${ARCH} != aarch64 ] ; then
   TOOL_PREFIX=aarch64-linux-gnu-

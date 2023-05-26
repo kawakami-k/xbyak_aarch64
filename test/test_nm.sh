@@ -24,7 +24,6 @@
 # | 2    | gitlab CI (Fujitsu in-house) | AArch64             | GCC      |
 # | 3    | gitlab CI (Fujitsu in-house) | AArch64             | FCC      |
 #*******************************************************************************
-
 TEST_FILE=${1}
 SETENV_PATH=`dirname ${0}`/../.github/automation/env
 
