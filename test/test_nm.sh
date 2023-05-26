@@ -60,9 +60,6 @@ set_variables() {
     g) . ${SETENV_PATH}/setenv-gcc
        ;;
     q) . ${SETENV_PATH}/setenv-qemu
-       echo ${SETENV_PATH}
-       ls ${SETENV_PATH}
-       ls -l ${SETENV_PATH}/setenv-qemu
       ;;
     *)
        ;;
